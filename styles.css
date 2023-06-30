@@ -82,24 +82,18 @@ header .form_input .icon {
     cursor: pointer;
 }
 
- footer {
+footer {
     position: absolute;
     bottom: 0;
-    height: 7%;
+    height: 10%;
     background: #00983d;
     width: 100%;
     font-size: 23px;
     font-style: unset;
-     font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     text-align: center;
 
 
-}
-
-footer p {
-    color: #000000;
-    font-weight: bold;
-    padding: 20px;
 }
 
 main {
@@ -129,4 +123,92 @@ main {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+button {
+    background-color: #00983d;
+    border: 3px solid #00983d;
+    padding: 0;
+    position: relative;
+    width: 6.2em;
+    height: 2em;
+    color: #000;
+    text-transform: uppercase;
+    font: 700 25px Consolas;
+    border-radius: 50px;
+    animation: rotateBorder 3s infinite linear;
+}
+
+@keyframes rotateBorder {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #670404;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+button p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #020000;
+}
+
+button svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #980000
+}
+
+button:hover p {
+    left: 0.9em;
+    color: #fff
+}
+
+button:hover svg {
+    opacity: 1;
+}
+
+button:hover {
+    background-color: #5fb9ec;
+
+}
+
+.contenedorbtn {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+p {
+    text-align: center; /* Para centrar el texto horizontalmente dentro del párrafo */
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+    /* Otros estilos adicionales para el enlace si es necesario */
 }
